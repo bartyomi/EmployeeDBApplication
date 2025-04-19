@@ -24,7 +24,7 @@ namespace EmployeeDBLibrary
         public string Email { get; set; }
 
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
 
         [Required]
         public decimal Salary { get; set; }

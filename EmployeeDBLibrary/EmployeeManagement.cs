@@ -45,7 +45,7 @@ public class EmployeeManagement
         string? firstName = null,
         string? lastName = null,
         string? email = null,
-        DateTime? dateOfBirth = null,
+        DateOnly? dateOfBirth = null,
         decimal? salary = null)
     {
         var query = _dbContext.Employees.Where(x => x.EmployeeID == id);

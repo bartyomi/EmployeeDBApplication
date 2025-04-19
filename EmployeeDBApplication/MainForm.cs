@@ -3,8 +3,6 @@ using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using EmployeeDBLibrary;
-
 
 namespace EmployeeDBApplication;
 
@@ -35,7 +33,7 @@ public partial class MainForm : Form
         _employeesTable.Columns.Add("First Name", typeof(string));
         _employeesTable.Columns.Add("Last Name", typeof(string));
         _employeesTable.Columns.Add("Email", typeof(string));
-        _employeesTable.Columns.Add("Date of Birth", typeof(DateTime));
+        _employeesTable.Columns.Add("Date of Birth", typeof(DateOnly));
         _employeesTable.Columns.Add("Salary", typeof(decimal));
 
         dataGridViewEmployees.DataSource = _employeesTable;

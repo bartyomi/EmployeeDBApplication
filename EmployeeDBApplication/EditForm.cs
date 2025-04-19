@@ -28,7 +28,7 @@ public partial class EditForm : Form
         txtFirstName.Text = Employee.FirstName;
         txtLastName.Text = Employee.LastName;
         txtEmail.Text = Employee.Email;
-        dtpDateOfBirth.Value = Employee.DateOfBirth;
+        dtpDateOfBirth.Value = Employee.DateOfBirth.ToDateTime(TimeOnly.MinValue);
         numSalary.Value = Employee.Salary;
     }
 
@@ -39,7 +39,7 @@ public partial class EditForm : Form
             Employee.FirstName = txtFirstName.Text;
             Employee.LastName = txtLastName.Text;
             Employee.Email = txtEmail.Text;
-            Employee.DateOfBirth = dtpDateOfBirth.Value;
+            Employee.DateOfBirth = DateOnly.FromDateTime(dtpDateOfBirth.Value);
             Employee.Salary = numSalary.Value;
 
             DialogResult = DialogResult.OK;
