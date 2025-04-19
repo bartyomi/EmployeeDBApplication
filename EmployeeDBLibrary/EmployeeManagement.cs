@@ -13,6 +13,7 @@ public class EmployeeManagement
     public EmployeeManagement(EmployeeContext employeeContext)
     {
         _dbContext = employeeContext;
+        _dbContext.Database.EnsureCreated();
     }
 
     public async Task<List<Employee>> GetAll()
@@ -30,7 +31,7 @@ public class EmployeeManagement
         try
         {
             await _dbContext.Employees.AddAsync(employee);
-            _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
             return employee.EmployeeID;
         }
         catch
