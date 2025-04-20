@@ -27,6 +27,7 @@ partial class MainForm
         buttonEdit = new Button();
         buttonDelete = new Button();
         buttonRefresh = new Button();
+        buttonClose = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).BeginInit();
         SuspendLayout();
         // 
@@ -80,7 +81,7 @@ partial class MainForm
         // 
         // buttonRefresh
         // 
-        buttonRefresh.Location = new System.Drawing.Point(896, 643);
+        buttonRefresh.Location = new System.Drawing.Point(468, 643);
         buttonRefresh.Margin = new Padding(4, 5, 4, 5);
         buttonRefresh.Name = "buttonRefresh";
         buttonRefresh.Size = new System.Drawing.Size(133, 46);
@@ -89,12 +90,24 @@ partial class MainForm
         buttonRefresh.UseVisualStyleBackColor = true;
         buttonRefresh.Click += buttonRefresh_Click;
         // 
+        // buttonClose
+        // 
+        buttonClose.Location = new System.Drawing.Point(896, 643);
+        buttonClose.Margin = new Padding(4, 5, 4, 5);
+        buttonClose.Name = "buttonClose";
+        buttonClose.Size = new System.Drawing.Size(133, 46);
+        buttonClose.TabIndex = 5;
+        buttonClose.Text = "Close";
+        buttonClose.UseVisualStyleBackColor = true;
+        buttonClose.Click += buttonClose_Click;
+        // 
         // MainForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = System.Drawing.SystemColors.Highlight;
+        BackColor = System.Drawing.SystemColors.Window;
         ClientSize = new System.Drawing.Size(1045, 709);
+        Controls.Add(buttonClose);
         Controls.Add(buttonRefresh);
         Controls.Add(buttonDelete);
         Controls.Add(buttonEdit);
@@ -106,4 +119,5 @@ partial class MainForm
         ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).EndInit();
         ResumeLayout(false);
     }
+    private Button buttonClose;
 }

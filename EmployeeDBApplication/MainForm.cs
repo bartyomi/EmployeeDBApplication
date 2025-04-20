@@ -14,9 +14,7 @@ public partial class MainForm : Form
     public MainForm()
     {
         InitializeComponent();
-
-        _management = new EmployeeManagement(new EmployeeContext());
-
+        InitializeDatabase();
         InitializeDataGridView();
         LoadEmployees();
     }
@@ -113,5 +111,10 @@ public partial class MainForm : Form
     private void buttonRefresh_Click(object sender, EventArgs e)
     {
         LoadEmployees();
+    }
+
+    private void buttonClose_Click(object sender, EventArgs e)
+    {
+        Close();
     }
 }
